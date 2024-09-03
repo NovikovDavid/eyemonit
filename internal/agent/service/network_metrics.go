@@ -32,10 +32,10 @@ func GetNetwork() ([]net.IOCountersStat, []net.ConnectionStat, net.InterfaceStat
 	return iocountersstat, connectionstat, interfacestat, nil
 }
 
-func GetBandwidth() ([]pkg.Bandwidth, error) {
+func GetBandwidth() ([]pkg.BandwidthStat, error) {
 	var (
 		interval      = 2 * time.Second
-		bandwidthData []pkg.Bandwidth
+		bandwidthData []pkg.BandwidthStat
 	)
 
 	initialCounters, err := net.IOCounters(true)
@@ -54,7 +54,7 @@ func GetBandwidth() ([]pkg.Bandwidth, error) {
 		bytesSentDiff := finalCounters[i].BytesSent - initialCounters[i].BytesSent
 		bytesRecvDiff := finalCounters[i].BytesRecv - initialCounters[i].BytesRecv
 
-		bandwidth := pkg.Bandwidth{
+		bandwidth := pkg.BandwidthStat{
 			Interface:     initialCounters[i].Name,
 			UploadSpeed:   float64(bytesSentDiff) / interval.Seconds(),
 			DownloadSpeed: float64(bytesRecvDiff) / interval.Seconds(),
