@@ -31,5 +31,6 @@ func Run() {
 
 	if metricsconf.Metrics.Network {
 		service.GetNetwork()
+		fmt.Println(service.GetBandwidth())
 	}
 }
