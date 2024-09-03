@@ -14,23 +14,19 @@ func Run() {
 	}
 
 	if metricsconf.Metrics.Cpu {
-		//fmt.Println(service.GetCpu())
+		//service.GetCpu()
 	}
 
 	if metricsconf.Metrics.Disk {
-		/*_, usagestat, _, err := service.GetDisk()
-		if err != nil {
-			fmt.Println("error", err)
-		}
-		fmt.Println(usagestat)*/
+		//service.GetDisk()
 	}
 
 	if metricsconf.Metrics.Memory {
-		//fmt.Println(service.GetMemory())
+		//service.GetMemory()
 	}
 
 	if metricsconf.Metrics.Network {
-		service.GetNetwork()
+		fmt.Println(service.GetNetwork())
 		fmt.Println(service.GetBandwidth())
 	}
 }
