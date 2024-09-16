@@ -1,7 +1,7 @@
 package config
 
 import (
-	pkg "eyemonit/pkg/config/agent"
+	pkg "eyemonit_agent/pkg/config/agent"
 	"os"
 
 	"gopkg.in/yaml.v3"

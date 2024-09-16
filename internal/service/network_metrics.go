@@ -3,7 +3,7 @@ package service
 import (
 	"time"
 
-	pkg "eyemonit/pkg/metrics"
+	pkg "eyemonit_agent/pkg/metrics"
 
 	"github.com/shirou/gopsutil/v4/net"
 )

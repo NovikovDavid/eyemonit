@@ -1,4 +1,4 @@
-module eyemonit
+module eyemonit_agent
 
 go 1.21.10
 
