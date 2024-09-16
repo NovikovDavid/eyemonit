@@ -1,6 +1,6 @@
 package main
 
-import "eyemonit/internal/agent/app"
+import "eyemonit/internal/app"
 
 func main() {
 	app.Run()

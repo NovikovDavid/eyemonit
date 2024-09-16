@@ -1,8 +1,8 @@
 package app
 
 import (
-	"eyemonit/internal/agent/config"
-	"eyemonit/internal/agent/service"
+	"eyemonit/internal/config"
+	"eyemonit/internal/service"
 	"fmt"
 )
 

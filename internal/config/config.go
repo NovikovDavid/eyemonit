@@ -1,16 +1,16 @@
 package config
 
 import (
-	pkg "eyemonit/pkg/agent/config/metrics"
+	pkg "eyemonit/pkg/config/agent"
 	"os"
 
 	"gopkg.in/yaml.v3"
 )
 
-func NewMetricsConfig() (*pkg.MetricsConfig, error) {
-	cfg := &pkg.MetricsConfig{}
+func NewConfig() (*pkg.AgentConfig, error) {
+	cfg := &pkg.AgentConfig{}
 
-	file, err := os.ReadFile("/etc/eyemonit/agent/metrics.yml")
+	file, err := os.ReadFile("/etc/eyemonit/agent/config.yml")
 	if err != nil {
 		return nil, err
 	}
